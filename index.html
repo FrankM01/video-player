@@ -12,17 +12,16 @@
 <body>
     <div class="wrapper">
         <div class="player">
-            <video id="video" poster="./images/poster.jpg"  src="https://media.w3.org/2010/05/sintel/trailer.mp4" width="400"></video>
+            <video id="video" src="https://media.w3.org/2010/05/sintel/trailer.mp4" width="400"></video>
             <div class="player-overlay">
-                <h2 class="player-title">Musica para programar</h2>
+                <h2 class="player-title">Trailer Movie</h2>
                 <div class="player-actions">
-                    <button class=" button" id="backward" aria-label="Retrocedere 10 seg"
-                        title="Retroceder 10 seg"></button>
+                    <button class=" button" id="backward" aria-label="Retrocedere 10 seg" title="Retroceder 10 seg"></button>
                     <button class=" button" id="play" aria-label="PLay" title="Reproducir"></button>
                     <button class=" button" hidden id="pause" aria-label="Pause" title="Pausar"></button>
                     <button class=" button" id="forward" aria-label="Adelantar 10 seg"
                         title="Adelantar 10 seg"></button>
-                </div>
+                </div>r
                 <div class="player-progress">
                     <input id="progress" type="range" min="0" value="0" step="1">
                 </div>
@@ -30,8 +29,17 @@
         </div>
     </div>
 
+    <!-- <style>
+        video {
+            border-width: 10px;
+            border-style: solid;
+            border-color: white;
+            border-radius: 8px;
+        }
+    </style> -->
 
     <script src="./js/index.js"></script>
+
 </body>
 
 </html>

@@ -5,6 +5,14 @@ const $backward = document.querySelector('#backward')
 const $forward = document.querySelector('#forward')
 const $progress = document.querySelector('#progress')
 
+$play.addEventListener('click', handlePlay)
+$pause.addEventListener('click', handlePause)
+$backward.addEventListener('click', handleBackward)
+$forward.addEventListener('click', handleForward)
+$video.addEventListener('loadedmetadata', handleLoaded)
+$video.addEventListener('timeupdate', handleTimeUpdate)
+$progress.addEventListener('input', handleInput)
+
 function handlePlay() {
     $video.play()
     $play.hidden = true;
@@ -31,19 +39,13 @@ function handleLoaded() {
 }
 function handleTimeUpdate() {
     $progress.value = $video.currentTime
-    console.log('Tiempo actual', $video.currentTime)
+    // console.log('Tiempo actual', $video.currentTime)
 }
 function handleInput() {
     $video.currentTime = $progress.value
     console.log($progress.value)
 }
 
-$play.addEventListener('click', handlePlay)
-$pause.addEventListener('click', handlePause)
-$backward.addEventListener('click', handleBackward)
-$forward.addEventListener('click', handleForward)
-$video.addEventListener('loadedmetadata', handleLoaded)
-$video.addEventListener('timeupdate', handleTimeUpdate)
-$progress.addEventListener('input', handleInput)
+
 
 // ctrl + d en una palabra , cambia las demas 
